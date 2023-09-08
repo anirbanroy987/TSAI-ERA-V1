@@ -1,3 +1,13 @@
+Dataset Pre Processing
+
+1.Removed all English sentences with more than 150 "tokens"
+2.Removed all french sentences where len(fench_sentences) > len(english_sentrnce) + 10
+
+Final total number of rows  - 20,694 
+
+Max length of source sentence: 471
+Max length of target sentence: 482
+
 Model Enhancement
 
 1. Implemented One cycle Policy 
