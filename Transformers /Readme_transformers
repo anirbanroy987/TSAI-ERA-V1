@@ -1,0 +1,22 @@
+Model Enhancement
+
+1. Implemented One cycle Policy 
+Sample Code - 
+
+    scheduler = torch.optim.lr_scheduler.OneCycleLR(optimizer,
+                                                max_lr = MAX_LR,
+                                                steps_per_epoch = STEPS_PER_EPOCH,
+                                                epochs = EPOCHS,
+                                                pct_start = int(0.3*EPOCHS)/EPOCHS  if EPOCHS !=1 else 0.5,
+                                                div_factor = 100,
+
+                                                final_div_factor = 100 ,
+                                                anneal_strategy = "linear")
+2. Parameter Sharing 
+3.Automatic Mixed Precision 
+4.Dynamic Padding 
+
+The overall loss after 18 epochs comes down to 1.8 
+Also i have reduced the d_ff to 512 . 
+The time for first epoch comes down 4/5 mins per epoch .
+
